@@ -20,3 +20,9 @@ reloadBashrc()
 {
 	source ~/.bashrc
 }
+
+function launchJekyll()
+{
+    jekyll --server --base-url '/blog'
+    echo "Site available at : http://localhost:4000/blog"
+}
