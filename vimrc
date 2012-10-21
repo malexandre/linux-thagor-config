@@ -102,4 +102,8 @@ nmap <silent> <A-Right> :wincmd l<CR>
 " Taglist
 let Tlist_Inc_Winwidth=0
 let Tlist_GainFocus_On_ToggleOpen=1
-noremap <silent> <F8> :TlistToggle<CR>
+noremap <silent> <F3> :TlistToggle<CR>
+
+" NerdTree
+let NERDTreeQuitOnOpen=1
+noremap <silent> <F2> :NERDTreeToggle<CR>
