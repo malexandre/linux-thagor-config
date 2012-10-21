@@ -27,12 +27,13 @@ filetype plugin indent on
 " Formatting
 set formatoptions=tq
 set textwidth=120
-imap <leader>so System.out.println();<left><left>
-imap <leader>no Notification.setMessage();<left><left>
 
 " Java
 let java_minilines=100
 let java_highlight_java_lang_ids=1
+imap <leader>so System.out.println();<left><left>
+imap <leader>no Notification.setMessage();<left><left>
+imap <leader>ne Notification.setError();<left><left>
 
 " Manual re-indentation
 noremap < <gv
@@ -97,3 +98,8 @@ nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
+
+" Taglist
+let Tlist_Inc_Winwidth=0
+let Tlist_GainFocus_On_ToggleOpen=1
+noremap <silent> <F8> :TlistToggle<CR>

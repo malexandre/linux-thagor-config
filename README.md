@@ -13,3 +13,19 @@ Plugins used :
 * NERD Commenter (https://github.com/scrooloose/nerdcommenter)
 * Snip Mate (https://github.com/msanders/snipmate.vim)
 * Tag list (http://vim-taglist.sourceforge.net/)
+
+Quick use :
+* F8 display/hide the list of class, field, method, etc... Press Enter to jump directly to it. Gain focus on display.
+* "Ctrl + T" open a new file in a new tab.
+* "Ctrl + O" open an existing file in a new tab.
+* In normal mode :
+    * ",c<space>" toggle the comment state of the selected line(s).
+    * ",c$" comments the current line from the cursor to end of line.
+    * ",cA" adds comment delimiters to the end of line and goes into insert mode between them.
+    * "Alt + Arrow" switch to the split window in that direction.
+    * "<" and ">" change the indentation.
+* In insert mode :
+    * "Ctrl + z" undoes last change.
+    * ",so" add System.out.println(); and leave the cursor inside the paranthesis.
+    * ",no" add Notification.setMessage(); and leave the cursor inside the paranthesis.
+    * ",ne" add Notification.setError(); and leave the cursor inside the paranthesis.
