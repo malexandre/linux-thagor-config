@@ -1,10 +1,11 @@
 function promptGit()
 {
 	if [[ -d ./.git ]]; then
+	    local change_waiting_commit=`if git status | grep -q "nothing to commit (working directory clean)"; then  echo ""; else echo ">"; fi`
 		local current_branch=`git rev-parse --symbolic-full-name --abbrev-ref HEAD`
 		local commits_behind=`git rev-list --left-right $current_branch...origin/master | grep -c "^>"`
 		local commits_ahead=`git rev-list --left-right $current_branch...origin/master | grep -c "^<"`
-		echo " [$current_branch|-$commits_behind|+$commits_ahead]"
+		echo " [$change_waiting_commit$current_branch|-$commits_behind|+$commits_ahead]"
 	fi
 }
 
